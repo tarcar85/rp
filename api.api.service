@@ -1,0 +1,10 @@
+[Unit]
+Description=Start Node server
+
+[Service]
+User=ec2-user
+Group=ec2-user
+ExecStart=/home/ec2-user/.nvm/versions/node/v10.16.1/bin/node /home/ec2-user/nodejs/rest-api/index.js
+
+[Install]
+WantedBy=multi-user.target
