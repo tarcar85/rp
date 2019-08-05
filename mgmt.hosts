@@ -1,0 +1,6 @@
+127.0.0.1   localhost localhost.localdomain
+192.168.255.56 mgmt
+192.168.255.88 client
+192.168.255.40 rp
+192.168.255.24 server
+192.168.255.8 api
