@@ -88,7 +88,7 @@ for x in server ;
  do
   ssh $x ' sudo yum install -y httpd mod_ssl && sudo systemctl enable httpd ' ;
   ssh $x ' sudo rm /etc/httpd/conf.d/* ' ;
-  ssh $x ' sudo htpasswd -c /etc/httpd/conf.d/secret.htpasswd ticket ' ;
+  ssh $x ' sudo htpasswd -c /etc/httpd/conf.d/secret.htpasswd user ' ;
  done ;
 
 for x in server ;
