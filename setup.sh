@@ -44,6 +44,7 @@ for x in $all ;
 for x in api ;
  do
   ssh $x ' curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash && . ~/.nvm/nvm.sh && nvm install 10 ' ;
+  ssh $x ' sudo ln -s $( which node ) /usr/bin/node ' ;
   ssh $x ' sudo yum install git -y && git clone https://github.com/secobau/nodejs ' ;
   ssh $x ' cd nodejs/rest-api && rm package.json && npm init --yes && npm install express ' ;
   ssh $x ' file=nodejs/rest-api/index.js  && sed -i /app.listen/d $file && "echo app.listen(8080)" 1>>$file ' ;
