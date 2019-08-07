@@ -20,7 +20,7 @@ sudo cp mgmt.hosts /etc/hosts ;
 
 for x in $all ;
  do
-  ssh $x hostname ;
+  ssh -oStrictHostKeyChecking=no $x hostname ;
  done ;
 
 for x in $all ;
