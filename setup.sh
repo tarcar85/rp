@@ -80,7 +80,7 @@ for x in rp ;
    do
     for z in /etc/nginx ;
      do
-      sed -i s/PUBLIC_IP_OF_SERVER/$( ssh server ' curl ifconfig.co ' )/g $y ;
+      sed -i s/PUBLIC_IP_OF_SERVER/$( ssh server ' curl ifconfig.co ' )/g $x.$y ;
       scp_cp_chown ;
      done ;
    done ;
