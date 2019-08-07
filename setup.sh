@@ -18,7 +18,7 @@ cd $path ;
 
 sudo cp mgmt.hosts /etc/hosts ;
 
-for x in $all ;
+for x in $all mgmt ;
  do
   ssh -oStrictHostKeyChecking=no $x hostname ;
  done ;
