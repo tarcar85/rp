@@ -90,7 +90,7 @@ for x in server ;
  do
   ssh $x ' sudo yum install -y httpd mod_ssl && sudo systemctl enable httpd ' ;
   ssh $x ' sudo rm /etc/httpd/conf.d/* ' ;
-  ssh $x ' sudo htpasswd -c /etc/httpd/conf.d/secret.htpasswd user ' ;
+  ssh $x ' sudo htpasswd -b -c /etc/httpd/conf.d/secret.htpasswd user password ' ;
  done ;
 
 for x in server ;
