@@ -23,6 +23,8 @@ for x in mgmt $all ;
   ssh -oStrictHostKeyChecking=no $x hostname ;
  done ;
 
+INICIALIZA GIT
+
 for x in $all ;
  do
   ssh $x ' sudo yum update -y && sudo yum install git -y ' ;
